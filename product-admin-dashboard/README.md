@@ -83,7 +83,7 @@ new products appear at the top of page 1 (ids from 100000 up), edits replace the
 
 **Bad URL values.** `parseParams` (`src/lib/query.js`) validates everything: `?page=abc` -> 1, `?limit=15` -> 10, unknown `sort` is ignored. `?page=999` loads, sees the real total, and redirects to the last page. `/products/abc` shows "not found" immediately.
 
-**Repeated clicks.** Login, Save and Delete use a `useRef` lock (updates instantly, unlike state) plus a disabled button, so only one request is ever in flight.
+**Repeated clicks.** Login, Save and Delete use a `useRef` lock (updates instantly, unlike state) plus a disabled button, so only one request is ever in fly
 
 **Auth.** The token is stored in a cookie so `middleware.js` can protect pages on the server, and the Axios request interceptor adds it as `Authorization: Bearer`. A 401 clears the session and redirects to `/login`. The cookie is readable by JavaScript; a production app would use an `httpOnly` cookie set by a server route.
 
