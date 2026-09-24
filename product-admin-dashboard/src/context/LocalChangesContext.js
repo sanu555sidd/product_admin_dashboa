@@ -7,7 +7,7 @@ import { isLocalId } from '@/lib/localProducts';
 // the changes here (persisted in localStorage) and lay them over API responses.
 //   added:   products created in the app (array, newest first)
 //   edited:  { [id]: full edited product }  (for products that exist on the API)
-//   deleted: { [id]: product snapshot }     (snapshot lets us adjust totals correctly)
+//   deleted: { [id]: product snapshot }     (snapshot lets us adjust totals correctly)mj
 const STORAGE_KEY = 'product-admin:local-changes';
 const EMPTY = { added: [], edited: {}, deleted: {} };
 
